@@ -29,9 +29,19 @@ class Site extends Api {
      * @exception 400 非法请求，参数传递错误
 	 */
 	public function index() {
+	    //初始化队列
+	    \Resque::setBackend('localhost:6379');
+	    $argc = array(
+	        'name' => time()
+        );
+        //写入队列
+        for($i=0;$i<10000;$i++) {
+            $jobId = \Resque::enqueue('default', 'PayMessageJob', $argc, true);
+        }
+	    //$jobId = \Resque::enqueue('default', 'PHP_Job', $argc);
         return array(
             'title' => 'Hello ' . $this->username,
-            'version' => PHALAPI_VERSION,
+            'version' => $jobId,
             'time' => $_SERVER['REQUEST_TIME'],
         );
 	}

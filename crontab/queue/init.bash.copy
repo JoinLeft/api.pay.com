@@ -1,0 +1,48 @@
+#!/bin/bash
+##############################################
+# $Author: neo $
+# shell 脚本，启动|关闭|状态|重启 功能
+# $Id: chart.xml.sh 1234 2012-08-09 10:15:04Z neo $
+##############################################
+NAME=info
+BASEDIR='/www/'
+PROG=$BASEDIR/bin/$(basename $0)
+LOGFILE=/var/tmp/$NAME.log
+PIDFILE=/var/tmp/$NAME.pid
+##############################################
+# php 程序地址
+# PHP=/usr/local/php/bin/php
+HOME=/Users/jiang/
+PHP=/Applications/MAMP/bin/php/php7.1.8/bin/php
+##############################################
+#echo $$
+#echo $BASHPID
+# 启动程序
+function start(){
+    nohup /Applications/MAMP/bin/php/php7.1.8/bin/php /Users/jiang/wwwroot/api.pay.com/crontab/queue/test.php >> output 2>&1 &
+}
+# 关闭程序
+function stop(){
+    kill -9 $(ps -ef|grep Resque |awk '$0 !~/grep/ {print $2}' |tr -s '\n' ' ')
+}
+
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  status)
+      ps aux | grep Resque
+    ;;
+  restart)
+    stop
+    start
+    ;;
+  *)
+    echo $"Usage: $0 {start|stop|status|restart}"
+    exit 2
+esac
+
+exit $?

@@ -14,7 +14,15 @@
             "role": "Developer"
         }
     ],
+    "config": { "github-oauth": { "github.com": "905ff815fd080d2623864d7e916a7824b881a8e4" } },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/JoinLeft/php-resque.git"
+        }
+    ],
     "require": {
+        "joinleft/php-resque": "master",
         "php": ">=5.3.3",
         "phalapi/kernal": "2.2.2",
         "phalapi/qrcode": "dev-master",

@@ -1,5 +1,52 @@
 [
     {
+        "name": "joinleft/php-resque",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/JoinLeft/php-resque.git",
+            "reference": "27b56e97b4452baf70a23071d18fd23b4dcdf3b0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/JoinLeft/php-resque/zipball/27b56e97b4452baf70a23071d18fd23b4dcdf3b0",
+            "reference": "27b56e97b4452baf70a23071d18fd23b4dcdf3b0",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2018-04-16T10:07:11+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Resque": "lib"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Chris Boulton",
+                "email": "chris@bigcommerce.com"
+            }
+        ],
+        "description": "Redis backed library for creating background jobs and processing them later. Based on resque for Ruby.",
+        "homepage": "http://www.github.com/JoinLeft/php-resque/",
+        "keywords": [
+            "background",
+            "job",
+            "redis",
+            "resque"
+        ],
+        "support": {
+            "source": "https://github.com/JoinLeft/php-resque/tree/master"
+        }
+    },
+    {
         "name": "phalapi/kernal",
         "version": "2.2.2",
         "version_normalized": "2.2.2.0",

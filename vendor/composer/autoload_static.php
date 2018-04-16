@@ -49,11 +49,22 @@ class ComposerStaticInit6835957bc29912b8a4cd2dd758af2e80
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'R' => 
+        array (
+            'Resque' => 
+            array (
+                0 => __DIR__ . '/..' . '/joinleft/php-resque/lib',
+            ),
+        ),
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit6835957bc29912b8a4cd2dd758af2e80::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit6835957bc29912b8a4cd2dd758af2e80::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit6835957bc29912b8a4cd2dd758af2e80::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }
