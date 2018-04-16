@@ -1,7 +1,8 @@
 #!/bin/bash
 # 启动程序
 function start(){
-    nohup /usr/local/php/bin/php /data/wwwroot/api.test.com/crontab/queue/Resque.php '--count=10' >> /data/wwwlogs/output 2>&1 &
+    nohup /usr/local/php/bin/php /data/wwwroot/api.test.com/crontab/queue/Resque.php --count=10
+    # >> /data/wwwlogs/output 2>&1 &
 }
 # 关闭程序
 function stop(){
