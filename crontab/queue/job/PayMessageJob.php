@@ -5,8 +5,7 @@
  * Date: 2018/4/12
  * Time: 21:26
  */
-use PhalApi;
-use PhalApi\NotORM;
+
 class PayMessageJob
 {
     //前置方法
