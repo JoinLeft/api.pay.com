@@ -6,8 +6,8 @@
  * Time: 21:26
  */
 namespace App\Common;
-require_once dirname(__FILE__).'/../../vendor/chrisboulton/php-resque/lib/Resque/Event.php';
-require_once dirname(__FILE__).'/../../vendor/chrisboulton/php-resque/extras/sample-plugin.php';
+require_once dirname(__FILE__).'/../../vendor/joinleft/php-resque/lib/Resque/Event.php';
+require_once dirname(__FILE__).'/../../vendor/joinleft/php-resque/extras/sample-plugin.php';
 
 class PayMessageJog
 {

@@ -6,9 +6,9 @@
 if (php_sapi_name() !== 'cli')  die('The file can only be run in cli mode!');
 // 时区设置
 date_default_timezone_set('Asia/Shanghai');
-require_once dirname(__FILE__).'/../../vendor/chrisboulton/php-resque/lib/Resque.php';
-require_once dirname(__FILE__).'/../../vendor/chrisboulton/php-resque/lib/Resque/Job/Status.php';
-require_once dirname(__FILE__).'/../../vendor/chrisboulton/php-resque/lib/Resque/Worker.php';
+require_once dirname(__FILE__).'/../../vendor/joinleft/php-resque/lib/Resque.php';
+require_once dirname(__FILE__).'/../../vendor/joinleft/php-resque/lib/Resque/Job/Status.php';
+require_once dirname(__FILE__).'/../../vendor/joinleft/php-resque/lib/Resque/Worker.php';
 //use Resque;
 
 /***

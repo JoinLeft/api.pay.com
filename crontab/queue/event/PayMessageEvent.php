@@ -4,7 +4,7 @@
  */
 
 //引入监听类
-require_once dirname(__FILE__).'/../../../vendor/chrisboulton/php-resque/lib/Resque/Event.php';
+require_once dirname(__FILE__).'/../../../vendor/joinleft/php-resque/lib/Resque/Event.php';
 
 // Somewhere in our application, we need to register:
 Resque_Event::listen('afterEnqueue', array('PayMessageEvent', 'afterEnqueue'));

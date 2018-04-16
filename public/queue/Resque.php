@@ -22,8 +22,8 @@ if ( !file_exists($job_path) ) {
 }
 //自动加载job类
 require_once $job_path;
-//require dirname(__FILE__).'/../../vendor/chrisboulton/php-resque/demo/job.php';
+//require dirname(__FILE__).'/../../vendor/joinleft/php-resque/demo/job.php';
 //自动加载
 
 //引入库文件
-require_once dirname(__FILE__).'/../../vendor/chrisboulton/php-resque/resque.php';
+require_once dirname(__FILE__).'/../../vendor/joinleft/php-resque/resque.php';
