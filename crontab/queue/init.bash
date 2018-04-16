@@ -1,7 +1,7 @@
 #!/bin/bash
 # 启动程序
 function start(){
-    nohup /Applications/MAMP/bin/php/php7.1.8/bin/php /Applications/MAMP/htdocs/index.php >> /Applications/MAMP/htdocs/output 2>&1 &
+    nohup /usr/local/php/bin/php /data/wwwroot/api.test.com/crontab/queue/Resque.php >> /data/wwwlogs/output 2>&1 &
 }
 # 关闭程序
 function stop(){
