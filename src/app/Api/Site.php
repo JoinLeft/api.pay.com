@@ -37,7 +37,7 @@ class Site extends Api {
 	        'name' => time()
         );
         //写入队列
-        for($i=0;$i<10000;$i++) {
+        for($i=0;$i<100;$i++) {
             $jobId = \Resque::enqueue('default', 'PayMessageJob', $argc, true);
         }
 	    //$jobId = \Resque::enqueue('default', 'PHP_Job', $argc);
