@@ -2,7 +2,6 @@
 namespace App\Api;
 
 use PhalApi\Api;
-
 /**
  * 默认接口服务类
  *
@@ -32,6 +31,7 @@ class Site extends Api {
         ini_set('display_errors', 'on');
         error_reporting(E_ALL);
 	    //初始化队列
+
 	    \Resque::setBackend('localhost:6379');
 	    $argc = array(
 	        'name' => time()
