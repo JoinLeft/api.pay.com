@@ -15,7 +15,7 @@ return array(
         'db_master' => array(                       //服务器标记
             'type'      => 'mysql',                 //数据库类型，暂时只支持：mysql, sqlserver
             'host'      => '127.0.0.1',             //数据库域名
-            'name'      => 'test',               //数据库名字
+            'name'      => 'test',                  //数据库名字
             'user'      => 'root',                  //数据库用户名
             'password'  => 'jiang',	                    //数据库密码
             'port'      => 3306,                    //数据库端口

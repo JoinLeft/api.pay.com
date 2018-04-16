@@ -29,6 +29,8 @@ class Site extends Api {
      * @exception 400 非法请求，参数传递错误
 	 */
 	public function index() {
+        ini_set('display_errors', 'on');
+        error_reporting(E_ALL);
 	    //初始化队列
 	    \Resque::setBackend('localhost:6379');
 	    $argc = array(
