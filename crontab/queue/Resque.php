@@ -202,7 +202,6 @@ class QueueController
         }
     }
 }
-//睡眠10秒等待redis服务启动
-sleep(10);
+
 $que = new QueueController($argv);
 $que->index();
