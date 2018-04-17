@@ -9,11 +9,10 @@ function stop(){
     kill -9 $(ps -ef|grep Resque |awk '$0 !~/grep/ {print $2}' |tr -s '\n' ' ')
 }
 
-# 睡眠5s等待redis启动
-sleep 5s
-
 case "$1" in
   start)
+    # 睡眠3s等待redis启动
+    sleep 3s
     start
     ;;
   stop)
